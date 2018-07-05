@@ -26,8 +26,8 @@ class CreatePropertiesTable extends Migration
             $table->string('parking');
             $table->string('room_details');         
             $table->text('description');
-            $table->string('user_id')->unique();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('user_id',191)->unique();
+            //$table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

@@ -18,9 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('username');
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('email')->unique();
+            $table->string('email',191)->unique();
             $table->string('password');
-            $table->string('api_token')->unique();
+            $table->string('api_token',191)->unique();
             $table->string('usertype');
             $table->string('user_status');
             $table->string('user_activation_key');
