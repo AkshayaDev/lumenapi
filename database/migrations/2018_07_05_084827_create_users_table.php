@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('api_token')->unique();
             $table->string('usertype');
+            $table->string('user_status');
+            $table->string('user_activation_key');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

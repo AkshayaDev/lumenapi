@@ -16,6 +16,7 @@ class CreateHouseownersTable extends Migration
         Schema::create('houseowners', function (Blueprint $table) {
             $table->increments('id');
             $table->text('renter_preferences');
+            $table->string('property_id')->unique();
             $table->string('user_id')->unique();
             $table->foreign('user_id')->references('id')->on('users');            
             $table->timestamps();
